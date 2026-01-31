@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("https://images.unsplash.com/photo-1517607644823-2a9be4a8c7f5?auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  color: #fff;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #facc15;
+  font-size: 24px;
+  font-weight: bold;
+}
+#search {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 240px;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: #050505;
+  flex-wrap: wrap;
+}
+
+.menu button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background: #facc15;
+  color: #000;
+}
+
+.section {
+  padding: 25px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.card-info {
+  padding: 10px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+.modal-box {
+  background: #111;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+}
+.modal-box img {
+  width: 220px;
+  border-radius: 10px;
+}
+.modal-info {
+  flex: 1;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+.watch {
+  background: #22c55e;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+.download {
+  background: #3b82f6;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+#like {
+  background: #ef4444;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+#close {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.rating {
+  margin-top: 5px;
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .modal-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
